@@ -1,0 +1,56 @@
+
+
+{% extends 'base.html' %}
+{% block titile %}
+    动态详情 | 河南省中思科技有限公司
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/news_details.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="news_details">
+        <div class="news_details_title">
+            <div class="news_details_word">
+                <span class="news_details_title_word_1">企业动态</span>
+            </div>
+            <div class="news_details_main">
+                <div class="news_details_main_title">
+                    {{ new_detail.title }}
+                </div>
+                <div class="news_details_main_time">
+                    发布时间：<span> {{ new_detail.add_time }}</span>
+                </div>
+                <div class="news_details_main_word">
+                    {% autoescape off %}
+                        {{ new_detail.detail }}
+                    {% endautoescape %}
+                </div>
+                <div class="news_details_main_img">
+
+                </div>
+            </div>
+            <div class="news_details_main_prev">
+                {% if prev_detail %}
+                    <span>上一篇：</span><a href="{% url 'detail' prev_detail.id %}">{{ prev_detail.title }}</a>
+                {% endif %}
+            </div>
+            <div class="news_details_main_next">
+                {% if next_detail %}
+                     <span>下一篇：</span><a href="{% url 'detail' next_detail.id %}"> {{ next_detail.title }}</a>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'js/news.js' %}"></script>
+{% endblock %}
+
+
+

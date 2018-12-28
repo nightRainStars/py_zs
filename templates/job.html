@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block titile %}
+    招贤纳士 | 河南省中思科技有限公司
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/job.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="job_main">
+        <div class="job_main_title">
+            <div class="job_main_title_word">
+                <span class="job_main_title_word_1">招贤纳士</span>
+            </div>
+        </div>
+        <div class="job_main_cont">
+            <div class="job_main_cont_tr">
+                <div class="job_main_cont_tr_1">
+                    我们正在寻找更多才华横溢、怀揣梦想的小伙伴，和我们一起做充满挑战的事情。我们是一个充满活力，欢乐的团队，我们工作勤勉又乐趣十足，我们团结协作为创造价值而奋斗，如果你热爱创业的氛围，喜欢和志同道合的人一起快乐的工作，期待更多的挑战和成长，这里一定可以让你得到比你想象的更多。晋升、调薪、带薪年假、团队聚餐、逢年过节礼品这些就不显摆了，来吧，快到碗里来！
+                </div>
+                <div class="job_main_cont_tr_2">
+                    有意者请将个人简历、相关作品等资料发电子邮件至 <span>zskjhr1119@163.com</span>
+                </div>
+                <div class="job_main_cont_tr_3">
+                    —— 中思科技
+                </div>
+            </div>
+            <div class="job_main_cont_jobs">
+                <ul>
+                    {% for item in recruit_all %}
+                        <li class="{% ifequal forloop.counter0 0 %}job_main_cont_jobs_li{% endifequal %}"
+                            style="{% ifequal forloop.counter0 0 %}border-bottom: 0;{% endifequal %}">
+                            <div class="jobs_cont">
+                                <span>{{ item.recruit_name }}</span>
+                                <a style="{% ifequal forloop.counter0 0 %}color: #dc1616{% endifequal %}"><span>查看详情 </span><img
+                                        src="{% static 'image/icon_down.png' %}" alt=""/></a>
+                                <ul class="jobs_cont_ul jobs_cont_ul{{ forloop.counter }}">
+                                    <li>
+                                        <div class="jobs_cont_ul_div">
+                                            <span class="job_cout_ul_span"><img
+                                                    src="{% static 'image/image_sanjiao.png' %}"
+                                                    alt=""/></span>
+                                            <div style="width: 94%">
+                                                {% autoescape off %}
+                                                    {{ item.recruit_term }}
+                                                {% endautoescape %}
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div style="clear: both">
+                </div>
+                <div style="position: fixed;bottom:50px;right: 20px;display: none" id="goto-top">
+                    <img src="{% static 'image/top1.png' %}" alt="" style="width: 35px"/>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'js/news.js' %}"></script>
+    <script>
+        $('.jobs_cont a').click(function () {
+            $('.jobs_cont a').css({'color': '#666'})
+            $(this).css({'color': '#dc1616'})
+            $('.jobs_cont a').parent().parent().css({'borderBottom': '1px dashed #cccccc'})
+            $(this).parent().parent().css('border', '0')
+            for (i = 0; i < $('.jobs_cont a img').length; i++) {
+                $('.jobs_cont a img')[i].src = "{% static 'image/icon_down.png' %}"
+            }
+            $(this).children('img')[0].src = "{% static 'image/icon_up.png' %}";
+            $('.jobs_cont_ul').hide()
+            $(this).next().toggle()
+        });
+    </script>
+{% endblock %}
+
+
+

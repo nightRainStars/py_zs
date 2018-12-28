@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block titile %}
+    公司动态 | 河南省中思科技有限公司
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/news.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="trends_main">
+        <div class="trends_main_title">
+            <div class="trends_main_title_word">
+                <span class="trends_main_title_word_1">企业动态</span>
+            </div>
+            <div class="trends_main_title_news">
+                <ul class="trends_main_title_news_ul">
+                    {% for item in news.object_list %}
+                        <li>
+                            <div class="trends_main_title_news_img">
+                                <img src="{{ MEDIA_URL }}{{ item.img_cover }}" alt=""/>
+                            </div>
+                            <div class="trends_main_news_word">
+                                <div class="trends_main_word_title">
+                                    <a href="{% url 'detail' item.id %}">{{ item.title }}</a>
+                                </div>
+                                <div class="trends_main_word_time">
+                                    {{ item.add_time }}
+                                </div>
+                                <div class="trends_main_word_content">
+                                    {% autoescape off %}
+                                        {{ item.detail }}
+                                    {% endautoescape %}
+                                </div>
+                                <div class="trends_main_word_more">
+                                    <a href="{% url 'detail' item.id %}">查看更多</a>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div style="clear: both"></div>
+                <ul class="trends_main_page">
+                    {% if news.has_previous %}
+                        <li class="long trends_main_page_pre"><a href="?{{ news.previous_page_number.querystring }}">上一页</a>
+                        </li>
+                    {% endif %}
+                    {% for page in news.pages %}
+                        {% if page %}
+                            {% ifequal page news.number %}
+                                <li class="trends_main_page_active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                            {% else %}
+                                <li><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                            {% endifequal %}
+                        {% else %}
+                            <li class="none"><a href="">...</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if news.has_next %}
+                        <li class="long trends_main_page_next"><a
+                                href="?{{ news.next_page_number.querystring }}">下一页</a></li>
+                    {% endif %}
+                </ul>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'js/news.js' %}"></script>
+{% endblock %}
+
+
+

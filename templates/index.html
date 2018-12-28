@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block titile %}
+    首页 | 河南省中思科技有限公司
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <div class="video" style="width:1905px;background: url('{{ MEDIA_URL }}{{ videos.video_bg }}')">
+            <video src="{{ videos.video_url }}" preload autoplay loop style="width: 100%;height: 1080px; "></video>
+            <div class="logo_word">
+                <a>未来已来</a><br/>
+                <a>预见方能遇见</a>
+            </div>
+            <div style="width:1905px;background: rgba(0,0,0,0.4);height: 630px;position: absolute"></div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_sider">
+            <div class="main_sider_top" style="padding-left: 15px">公司简介</div>
+            {% for item in compang_info %}
+                <div class="main_sider_one" id="main_sider_sty{{ forloop.counter }}">
+                    <div class="main_sider_sty">
+                    </div>
+                    <div class="main_sider_word">
+                        <a>{{ item.name }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="main_section">
+            {% for info in compang_info %}
+                <div class="main_section_title item{{ forloop.counter }}">{{ info.name }}</div>
+                <div class="main_section_word item{{ forloop.counter }}">
+                    {% autoescape off %}
+                        {{ info.detail }}
+                    {% endautoescape %}
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="pic">
+        <div class="pic_show">
+            {% for n in news %}
+                <div class="pic_show_sec" style="{% ifequal forloop.counter0 0 %}margin-left: 35px{% endifequal %}">
+                    <a href="{% url 'detail' n.id %}" class="pic_show_sec_{{ forloop.counter }}">
+                        <img src="{{ MEDIA_URL }}{{ n.img_cover }}" alt="" width="436" height="246"/>
+                        <div class="pic_show_word">
+                            <div class="pic_show_word_1">{{ n.title }}</div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="pic_icon" style="clear: both">
+             <span onclick="change_news(0)">
+                <a href="javascript:void(0)" class="pic_icon_1"><img src="{% static 'image/left.png' %}" alt=""/></a>
+            </span>
+            <span onclick="change_news(1)">
+                <a href="javascript:void(0)" class="pic_icon_2"> <img src="{% static 'image/right-_selected.png' %}"
+                                                                      alt=""/></a>
+            </span>
+        </div>
+        <div class="pic_word" style="padding-top: 50px;">
+            <div class="pic_word_more">
+                <a href="{% url 'news' %}">查看更多</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script>
+        function change_news(index) {
+            $.ajax({
+                url: 'index/?status='+index,
+                type: 'GET',
+                success: function (data) {
+                    console.log(data)
+                },
+            })
+        }
+    </script>
+{% endblock %}
+
+
+

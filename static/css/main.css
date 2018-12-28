@@ -1,0 +1,146 @@
+﻿.nav_list li:nth-of-type(1) i{
+   background:#fd0037!important;
+}
+.main{
+    width: 1000px;
+    margin:0 auto;
+    padding: 60px 0;
+    height: 360px;
+    position: relative;
+}
+.main_sider{
+    position: absolute;
+    width: 236px;
+    height: 420px;
+    background: url("../image/shadow.png") no-repeat;
+    float: left;
+    overflow: hidden;
+    _overflow: hidden;
+}
+
+.main_sider_top{
+    font-size: 20px;
+    color: #333;
+    font-family: '微软雅黑';
+    padding: 30px 0 20px 0;
+}
+/*侧边栏文字效果
+*/
+.main_sider_one{
+    width: 236px;
+    height: 47px;
+    line-height: 47px;
+}
+.main_sider_one{
+    position: relative;
+    cursor:pointer;
+}
+.main_sider_sty{
+    height: 47px;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    background: #fd0037!important;
+}
+.main_sider_word{
+    position: absolute;
+    z-index: 1;
+}
+.main_sider_word:nth-of-type(1){
+    /*width: 236px;*/
+}
+.main_sider_one a{
+    color:#ffffff;
+    padding-left: 15px;
+}
+.main_section{
+    width: 683px;
+    height: 280px;
+    float: right;
+    padding: 0 52px 0 29px;
+}
+.main_section_title{
+    text-align: center;
+    font-size: 28px; ;
+    font-family: '微软雅黑';
+    color: #333333;
+    padding: 29px 0 20px 0;
+}
+
+.main_section_word{
+    font-family: 'SimSun';
+    font-size: 14px;
+    color: #333333;
+    line-height: 20px;
+}
+.main_section_word span{
+    display: inline-block;
+    padding-bottom: 3px;
+}
+.pic{
+    width: 1000px;
+    margin:0 auto;
+}
+.pic_icon{
+    text-align: center;
+}
+.pic_show_sec{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    height: 246px;
+}
+.pic_show_sec .pic_show_word{
+    width: 436px;
+    height: 80px;
+    color: white;
+    position: absolute;
+    bottom: -50px;
+    /*bottom: 0;*/
+    left: 15px;
+    background: rgba(0,0,0,0.5);
+}
+.pic_show_word_1{
+    line-height: 30px;
+    padding-left: 10px ;
+    font-family: '微软雅黑';
+    font-size: 16px;
+}
+.pic_show_word_2{
+    padding-left: 10px;
+    font-family: '宋体';
+    font-size: 14px;
+    line-height: 20px;
+}
+.pic_show img{
+    margin: 0 15px;
+}
+.pic_icon span{
+    display: inline-block;
+    padding:20px;
+}
+.pic_word .pic_word_more,.pic_word_sec{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.pic_word_more a{
+    width: 100px;
+    height: 36px;
+    display: block;
+    margin:0 auto;
+    background: url("../image/Btn_more.png")no-repeat;
+    color: white;
+    border-radius: 5px;
+    line-height: 36px;
+    font-size: 18px;
+    text-shadow: 1px 1px grey;
+}
+.pic_word_sec{
+    padding: 30px 0 60px 0;
+
+}
+
+.logo_word a {
+    font-family: "微软雅黑";
+}
+

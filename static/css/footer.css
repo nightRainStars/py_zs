@@ -1,0 +1,21 @@
+.footer{
+    clear: both;
+    width: 100%;
+    background: #333333;
+    color: #ccc8c8;
+    height: 40px;
+    line-height: 40px;
+}
+.footer_end{
+    width: 1000px;
+    margin: 0 auto;
+    background: #333333;
+ }
+.footer_end a{
+    font-size: 14px;
+    font-family: '宋体';
+    padding-left: 10px;
+}
+.footer_end span{
+    font-family: 'Arial';
+}

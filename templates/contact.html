@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block titile %}
+    联系我们 | 河南省中思科技有限公司
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="news_details">
+        <div class="news_details_title">
+            <div class="news_details_word">
+                <span class="news_details_title_word_1">联系我们</span>
+            </div>
+        </div>
+    </div>
+    <div class="contact_main">
+        <!-- 地图样式-->
+        <div style="width:900px;height:506px;border:#ccc solid 1px;margin:0 auto;" id="dituContent"></div>
+        <div class="contact_main_word">
+            <ul>
+                <li class="contact_main_word_tel ">
+                    <div class="contact_main_word_tel_1">
+                        <dl>
+                            <dd>
+                                <img src="{% static 'image/icon_phone.png' %}" alt=""/>
+                            </dd>
+                            <dt>
+                                联系电话
+                            </dt>
+                        </dl>
+                    </div>
+                    <div>
+                        <span>Tel:0371—55028677</span>
+                    </div>
+                </li>
+                <li class="contact_main_word_addr">
+                    <div class="contact_main_word_addr_1">
+                        <dl>
+                            <dd>
+                                <img src="{% static 'image/icon_loc.png' %}" alt=""/>
+                            </dd>
+                            <dt>
+                                公司地址
+                            </dt>
+                        </dl>
+                    </div>
+                    <div>
+                        <span>郑州市郑东新区商都路中兴南路建正东方中心B座1119</span>
+                    </div>
+                </li>
+                <li class="contact_main_word_mail">
+                    <div class="contact_main_word_mail_1">
+                        <dl>
+                            <dd>
+                                <img src="{% static 'image/icon_mail.png' %}" alt=""/>
+                            </dd>
+                            <dt>
+                                电子邮箱
+                            </dt>
+                        </dl>
+                    </div>
+                    <div>
+                        <span>zskjhr1119@163.com</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="http://api.map.baidu.com/api?key=&amp;v=1.1&amp;services=true"></script>
+    <script src="{% static 'js/news.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+{% endblock %}
+

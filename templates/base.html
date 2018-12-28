@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv=X-UA-Compatible content="IE=9">
+    <title>    {% block titile %}公司首页{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+    {% block custom_css %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}"/>
+</head>
+<body>
+<div class="header_nav">
+    <div class="header_nav_list">
+        <a href="{% url 'index' %}">
+            <img src="{% static 'image/logo.png' %}" alt=""/>
+        </a>
+        <div class="word">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="word-CN">
+{#                        <img src="{% static 'image/CN_selected.png' %}" alt=""/>#}
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="word-EN">
+{#                        <img src="{% static  'image/EN_nomal.png' %}" alt=""/>#}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i></i>
+                <a href="{% url 'index' %}">公司首页</a></li>
+            <li>
+                <i></i>
+                <a href="{% url 'news' %}">企业动态</a>
+            </li>
+            <li>
+                <i></i>
+                <a href="{% url 'recruit' %}">招贤纳士</a>
+            </li>
+            <li>
+                <i></i>
+                <a href="{% url 'contact' %}">联系我们</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% block content %}
+
+{% endblock %}
+<div class="footer">
+    <div class="footer_end">
+        <span>Copyright &copy; 2017</span>
+        <a>西藏弘鼎投资管理有限公司 版权所有，保留所有权利</a> | <a>备案号</a>：豫<span>ICP</span>备<span>12345678</span>号
+    </div>
+</div>
+<script src='http://www.jq22.com/jquery/html5.min.js'></script>
+<script src="{% static 'js/jquery-1.8.1.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script>
+
+</script>
+{% block custom_js %} {% endblock %}
+</body>
+</html>

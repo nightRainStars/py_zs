@@ -1,0 +1,152 @@
+.nav_list li:nth-of-type(2) i{
+    background:#fd0037!important;
+}
+.nw{
+    color: #ffffff!important;
+}
+ .nav_list li a{
+     color: #333333;
+ }
+.trends_main {
+    margin: 0 auto;
+    width: 1000px;
+}
+.trends_main_title_word{
+    padding: 100px 0 52px 30px;
+}
+.trends_main_title_word_1{
+    font-family: 'SimSun';
+    font-size: 30px;
+}
+
+ .trends_main_title_news_img{
+     float: left;
+     padding: 0 20px 0 30px;
+ }
+ .trends_main_title_news_ul{
+     clear: both;
+ }
+ .trends_main_title_news_ul li{
+     padding-bottom: 25px;
+ }
+ .trends_main_title_news_img img{
+     width:283px;
+     height: 170px;
+ }
+ .trends_main_news_word{
+     float: right;
+     width: 664px;
+     height: 169px;
+     border-bottom: 1px solid #cccccc;
+ }
+ .trends_main_word_title a{
+     color: #303333;
+     font-size: 16px;
+ }
+ .trends_main_word_title a:hover{
+     color: #e2231a;
+     text-decoration: underline;
+ }
+ .trends_main_word_more:hover{
+     background: #e2231a;
+ }
+ .trends_main_word_more a{
+     font-size: 16px;
+     font-family: 'SimSun';
+ }
+ .trends_main_word_time{
+     font-family:'Arial';
+     font-size: 15px;
+     padding-top: 7px;
+
+ }
+ .trends_main_word_content{
+     font-family: 'SimSun';
+     font-size: 14px;
+     line-height: 22px;
+     margin: 16px 0;
+     height: 44px;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+     overflow: hidden;
+ }
+ .trends_main_word_more{
+     width: 120px;
+     height: 34px;
+     line-height: 34px;
+     text-align: center;
+     background: #5d6770;
+ }
+.trends_main_word_more a{
+    color: white;
+}
+.trends_main_page{
+    float: right;
+    height: 26px;
+    margin-bottom: 60px ;
+}
+.trends_main_page li{
+    width: 26px;
+    height: 26px;
+    float: left;
+    line-height: 24px;
+    text-align: center;
+    background:#5d6770;
+    padding-bottom: 0;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.trends_main_page li a{
+    display: block;
+    width: 100%;
+    height: 26px;
+}
+ .trends_main_page  .trends_main_page_active{
+     background: #e2231a;
+ }
+ .trends_main_page li a{
+     color: white;
+     font-size: 14px;
+     font-family: 'Arial';
+ }
+ .trends_main_page .trends_main_page_next a{
+     color: #5d6770;
+ }
+ .trends_main_page .trends_main_page_pre a{
+     color: #5d6770;
+ }
+ .trends_main_page .trends_main_page_1 a{
+     color: #5d6770;
+ }
+ .trends_main_page .trends_main_page_2 a{
+     color: #5d6770;
+ }
+ .trends_main_page .trends_main_page_1 {
+     width: 44px;
+     height: 24px;
+     line-height: 20px;
+     background: #ffffff;
+     border: 1px solid  #5d6770;
+ }
+ .trends_main_page .trends_main_page_2{
+     width: 44px;
+     height: 24px;
+     line-height: 22px;
+     background: #ffffff;
+     border: 1px solid  #5d6770;
+ }
+ .trends_main_page .trends_main_page_next{
+     line-height: 22px;
+     height: 24px;
+     width: 58px;
+     border: 1px solid  #5d6770;
+     background: #ffffff;
+}
+ .trends_main_page .trends_main_page_pre {
+     line-height: 22px;
+     height: 24px;
+     width: 58px;
+     border: 1px solid  #5d6770;
+     background: #ffffff;
+ }

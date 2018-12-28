@@ -1,0 +1,106 @@
+﻿.nav_list li:nth-of-type(3) i{
+    background:#fd0037!important;
+}
+.job_main {
+    margin: 0 auto;
+    width: 1000px;
+}
+.job_main_title{
+    padding: 100px 0 30px 30px;
+}
+.job_main_cont_jobs{
+    clear: both;
+    padding: 55px 30px 60px 30px;
+    width: 100%
+}
+.job_main_title_word_1{
+    font-family: '微软雅黑';
+    font-size: 30px;
+}
+.job_main_cont_tr_1{
+    font-size: 14px;
+    font-family: 'SimSun';
+    color: #666;
+    line-height: 28px;
+    padding: 0 30px;
+    padding-top: 20px;
+}
+.job_main_cont_tr_2{
+    font-size: 14px;
+    font-family: 'SimSun';
+    color: #666;
+    padding: 0 30px;
+    padding-top: 32px;
+}
+.jobs_cont>a>span{
+    cursor: pointer;
+}
+.job_main_cont_tr_2 .job_cout_ul_span{
+    font-family: 'Arial';
+    font-size: 17px;
+    color: #dc1616;
+}
+.job_main_cont_tr_2 span{
+    color: #dc1616;
+    font-size: 17px;
+    font-family: 'Arial';
+}
+.job_main_cont_tr_3{
+    float: right;
+    padding-right: 30px;
+    font-family: 'SimSun';
+    color: #666;
+    font-size: 18px;
+    font-family: '微软雅黑';
+    margin-top: 63px;
+    clear: both;
+}
+.job_main_cont_jobs{
+    position: relative;
+}
+.job_main_cont_jobs>ul{
+    clear: both;
+}
+.job_main_cont_jobs>ul>li{
+    width: 940px;
+    border-bottom: 1px dashed #cccccc;
+    line-height: 55px;
+}
+.jobs_cont>a{
+    float: right;
+    font-size: 14px!important;
+    font-family: 'SimSun';
+    color: #666666;
+    padding-right: 15px;
+    font-family: 'Arial,微软雅黑';
+    font-size: 16px;
+    color: #333333;
+}
+.jobs_cont>span{
+    padding-left: 15px;
+    border-left: 3px solid #fd0037;
+}
+.jobs_cont_ul_div{
+    width: 940px;
+    border: 1px solid #cccccc;
+    margin-top: 15px;
+    position: relative;
+    padding-bottom: 30px;
+}
+.jobs_cont_ul_div .job_cout_ul_span{
+    position: absolute;
+    top: -32px;
+    left: 60px;
+}
+.jobs_cont_ul_div  .job_cout_ul_span img{
+    margin-bottom: 1px;
+}
+.jobs_cont_ul div>div{
+    width: 100%;
+    color: #666666;
+    font-family: '宋体';
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 30px;
+    margin-top: 30px;
+}
