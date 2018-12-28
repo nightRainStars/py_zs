@@ -32,3 +32,5 @@ class CompanyInfo(models.Model):
 
     def __str__(self):
         return '{0}简介'.format(self.name)
+
+
