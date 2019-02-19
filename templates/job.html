@@ -35,9 +35,8 @@
                             style="{% ifequal forloop.counter0 0 %}border-bottom: 0;{% endifequal %}">
                             <div class="jobs_cont">
                                 <span>{{ item.recruit_name }}</span>
-                                <a style="{% ifequal forloop.counter0 0 %}color: #dc1616{% endifequal %}"><span>查看详情 </span><img
-                                        src="
-                                                {% ifequal forloop.counter0 0 %}{% static 'image/icon_up.png' %}{% else %} {% static 'image/icon_down.png' %}{% endifequal %}"
+                                <a style="{% ifequal forloop.counter0 0 %}color: #dc1616{% endifequal %}"><span>查看详情 </span>
+                                    <img src="{% ifequal forloop.counter0 0 %}{% static 'image/icon_up.png' %}{% else %} {% static 'image/icon_down.png' %}{% endifequal %}"
                                         alt=""/></a>
                                 <ul class="jobs_cont_ul jobs_cont_ul{{ forloop.counter }}">
                                     <li>
@@ -79,7 +78,7 @@
                 $('.jobs_cont a img')[i].src = "{% static 'image/icon_down.png' %}"
             }
             $(this).children('img')[0].src = "{% static 'image/icon_up.png' %}";
-            $('.jobs_cont_ul').hide()
+            $('.jobs_cont_ul').hide();
             $(this).next().toggle()
         });
     </script>
