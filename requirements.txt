@@ -46,7 +46,7 @@ datashape==0.5.4
 decorator==4.3.0
 defusedxml==0.5.0
 distributed==1.23.1
-Django==1.11.10
+Django==2.2.24
 docutils==0.14
 egenix-mx-base==3.2.9
 entrypoints==0.2.3
